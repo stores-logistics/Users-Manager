@@ -1,4 +1,4 @@
-sa/course/resource/CourseResource.class
-sa/course/service/CourseService.class
-sa/course/JAXRSConfiguration.class
-sa/course/model/Course.class
+sa\course\service\CourseService.class
+sa\course\model\Course.class
+sa\course\JAXRSConfiguration.class
+sa\course\resource\CourseResource.class
