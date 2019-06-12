@@ -4,10 +4,12 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "courses")
-@NamedQueries({@NamedQuery(name = Course.FIND_ALL, query = "SELECT u FROM Course u")})
+@NamedQueries({@NamedQuery(name = Course.FIND_ALL, query = "SELECT u FROM Course u"),
+              @NamedQuery( name = Student.FIND_BY_USERNAME, query = "SELECT u FROM Course u WHERE u.userName = :username")})
 public class Course {
 
     public static final String FIND_ALL = "Course.findAll";
+    public static final String FIND_BY_USERNAME = "Course.findByUsername";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
