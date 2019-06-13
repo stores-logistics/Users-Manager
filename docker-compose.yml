@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - "3000:3000"
+    environment: 
+      LDAP_URL: '104.154.39.113'
     depends_on:
       courses-db:
         condition: service_healthy

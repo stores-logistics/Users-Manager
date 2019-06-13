@@ -23,7 +23,7 @@ public class LdapService {
 
     public Boolean connect() {
 
-        String ldapHost = "192.168.99.102";
+        String ldapHost = process.env.LOGIN_URL;
         String dn = "cn=admin,dc=arqsoft,dc=unal,dc=edu,dc=co";
         String password = "admin";
 
