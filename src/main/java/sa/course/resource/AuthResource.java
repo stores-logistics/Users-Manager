@@ -1,7 +1,7 @@
-package sa.course.resource;
+package sa.user.resource;
 
-import sa.course.model.Course;
-import sa.course.service.AuthService;
+import sa.user.model.User;
+import sa.user.service.AuthService;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
@@ -25,8 +25,8 @@ public class AuthResource {
     AuthService authService;
 
     @POST
-    public Response login(Course course) {
-        String reponse = authService.login(course);
+    public Response login(User user) {
+        String reponse = authService.login(user);
         response = Response.status(Response.Status.OK);
         response.entity(reponse);
         return response.build();

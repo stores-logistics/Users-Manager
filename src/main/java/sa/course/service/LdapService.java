@@ -1,4 +1,4 @@
-package sa.course.service;
+package sa.user.service;
 
 import com.novell.ldap.*;
 import java.io.UnsupportedEncodingException;

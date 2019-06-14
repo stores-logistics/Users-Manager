@@ -1,7 +1,7 @@
-sa\course\resource\AuthResource.class
-sa\course\model\Course.class
-sa\course\service\LdapService.class
-sa\course\JAXRSConfiguration.class
-sa\course\service\CourseService.class
-sa\course\service\AuthService.class
-sa\course\resource\CourseResource.class
+sa/user/service/UserService.class
+sa/user/service/LdapService.class
+sa/user/model/User.class
+sa/user/resource/UserResource.class
+sa/user/JAXRSConfiguration.class
+sa/user/service/AuthService.class
+sa/user/resource/AuthResource.class

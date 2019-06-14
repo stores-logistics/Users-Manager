@@ -1,7 +1,7 @@
-package sa.course.service;
+package sa.user.service;
 
-import sa.course.model.Course;
-import sa.course.service.LdapService;
+import sa.user.model.User;
+import sa.user.service.LdapService;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ejb.Stateless;
@@ -16,10 +16,10 @@ public class AuthService {
     String response = "";
     LdapService ldapService = new LdapService();
 
-    public String login(Course course) {
+    public String login(User user) {
 
-        String username = course.getUsername();
-        String password = course.getPassword();
+        String username = user.getUsername();
+        String password = user.getPassword();
 
         if (ldapService.connect()) {
             if (ldapService.validateUser(username, password)) {

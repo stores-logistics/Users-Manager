@@ -2,7 +2,7 @@
 <tomee>
     <Resource id="jdbc/app" type="DataSource">
         JdbcDriver  com.mysql.cj.jdbc.Driver
-        JdbcUrl     jdbc:mysql://courses-db:3306/courses-db
+        JdbcUrl     jdbc:mysql://users-db:3306/users-db
         UserName    sa
         Password    123
     </Resource>
