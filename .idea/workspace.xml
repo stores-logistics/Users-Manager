@@ -7,39 +7,39 @@
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/env/tomee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/env/tomee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sa/course/JAXRSConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sa/course/JAXRSConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sa/course/model/Course.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sa/course/resource/AuthResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sa/course/resource/AuthResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sa/course/resource/CourseResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sa/course/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sa/course/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sa/course/service/CourseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sa/course/service/LdapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sa/course/service/LdapService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sa/user/JAXRSConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sa/user/JAXRSConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sa/user/model/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sa/user/resource/AuthResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sa/user/resource/AuthResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sa/user/resource/CourseResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sa/user/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sa/user/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sa/user/service/CourseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sa/user/service/LdapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sa/user/service/LdapService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sa/course/JAXRSConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sa/course/JAXRSConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sa/course/model/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sa/course/resource/AuthResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sa/course/resource/AuthResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sa/course/resource/CourseResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sa/course/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sa/course/service/AuthService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sa/course/service/CourseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sa/course/service/LdapService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sa/course/service/LdapService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/classes/sa/course/JAXRSConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/classes/sa/course/model/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/classes/sa/course/resource/AuthResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/classes/sa/course/resource/CourseResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/classes/sa/course/service/AuthService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/classes/sa/course/service/CourseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/classes/sa/course/service/LdapService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/lib/jakarta.persistence-2.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/lib/jldap-4.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/lib/mysql-connector-java-6.0.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/lib/org.eclipse.persistence.antlr-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/lib/org.eclipse.persistence.asm-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/lib/org.eclipse.persistence.core-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/lib/org.eclipse.persistence.jpa-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/courses-ms/WEB-INF/lib/org.eclipse.persistence.jpa.jpql-2.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sa/user/JAXRSConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sa/user/JAXRSConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sa/user/model/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sa/user/resource/AuthResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sa/user/resource/AuthResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sa/user/resource/CourseResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sa/user/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sa/user/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sa/user/service/CourseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sa/user/service/LdapService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sa/user/service/LdapService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/classes/sa/user/JAXRSConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/classes/sa/user/model/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/classes/sa/user/resource/AuthResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/classes/sa/user/resource/CourseResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/classes/sa/user/service/AuthService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/classes/sa/user/service/CourseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/classes/sa/user/service/LdapService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/lib/jakarta.persistence-2.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/lib/jldap-4.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/lib/mysql-connector-java-6.0.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/lib/org.eclipse.persistence.antlr-2.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/lib/org.eclipse.persistence.asm-2.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/lib/org.eclipse.persistence.core-2.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/lib/org.eclipse.persistence.jpa-2.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/users-ms/WEB-INF/lib/org.eclipse.persistence.jpa.jpql-2.7.4.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -150,7 +150,7 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
               <item name="sa" type="462c0819:PsiDirectoryNode" />
-              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,7 +219,7 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/users-ms/WEB-INF/classes/sa/course/service/CourseService.class">
+    <entry file="file://$PROJECT_DIR$/target/users-ms/WEB-INF/classes/sa/user/service/CourseService.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst">
