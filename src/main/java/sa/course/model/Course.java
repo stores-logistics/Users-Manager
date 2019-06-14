@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "courses")
 @NamedQueries({@NamedQuery(name = Course.FIND_ALL, query = "SELECT u FROM Course u"),
-              @NamedQuery( name = Student.FIND_BY_USERNAME, query = "SELECT u FROM Course u WHERE u.userName = :username")})
+              @NamedQuery( name = Course.FIND_BY_USERNAME, query = "SELECT u FROM Course u WHERE u.username = :username")})
 public class Course {
 
     public static final String FIND_ALL = "Course.findAll";
@@ -20,7 +20,7 @@ public class Course {
     private String cabin;
     private String creditCard;
     //
-    private String userName;
+    private String username;
     private String password;
     private String phoneNumber;
     private String address;
@@ -65,11 +65,11 @@ public class Course {
         this.creditCard = creditCard;
     }
     //
-    public String getUserName(){
-      return userName;
+    public String getUsername(){
+      return username;
     }
-    public void setUserName(String userName){
-      this.userName = userName;
+    public void setUsername(String username){
+      this.username = username;
     }
 
     public String getPassword(){

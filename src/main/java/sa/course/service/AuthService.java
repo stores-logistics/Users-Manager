@@ -18,7 +18,7 @@ public class AuthService {
 
     public String login(Course course) {
 
-        String username = course.getUserName();
+        String username = course.getUsername();
         String password = course.getPassword();
 
         if (ldapService.connect()) {

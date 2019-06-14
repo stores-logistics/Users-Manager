@@ -58,7 +58,7 @@ public class CourseResource {
     @DELETE
     @Path("{code}")
     public Response deleteCourse(@PathParam("code") long code) {
-        Course deletedCourseCode = courseService.deleteCourse(code);
+        long deletedCourseCode = courseService.deleteCourse(code);
         response = Response.status(Response.Status.OK);
         response.entity(deletedCourseCode);
         return response.build();

@@ -23,8 +23,10 @@ public class CourseService {
         return entityManager.find(Course.class, code);
     }
 
-    public void createCourse(Course course) {
+    public Course createCourse(Course course) {
         entityManager.persist(course);
+        entityManager.flush();
+        return course;
     }
 
     public Course updateCourse(long code, Course course) {
@@ -35,7 +37,7 @@ public class CourseService {
         courseToUpdate.setCabin(course.getCabin());
         courseToUpdate.setCreditCard(course.getCreditCard());
         //
-        courseToUpdate.setUserName(course.getUserName());
+        courseToUpdate.setUsername(course.getUsername());
         courseToUpdate.setPassword(course.getPassword());
         courseToUpdate.setPhoneNumber(course.getPhoneNumber());
         courseToUpdate.setAddress(course.getAddress());
@@ -47,8 +49,9 @@ public class CourseService {
         return entityManager.merge(courseToUpdate);
     }
 
-    public void deleteCourse(long code) {
+    public long deleteCourse(long code) {
         Course course = entityManager.find(Course.class, code);
         entityManager.remove(course);
+        return code;
     }
 }
