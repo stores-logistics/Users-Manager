@@ -43,8 +43,7 @@ public class LdapService {
     }
 
     public Boolean validateUser(String username, String password){
-
-        String dn = "cn=" + username + ",ou=academy,dc=arqsoft,dc=unal,dc=edu,dc=co";
+        String dn = "cn=" + username + ",ou=store,dc=arqsoft,dc=unal,dc=edu,dc=co";
         try {
             lc.bind(dn, password);
             return true;
@@ -54,7 +53,7 @@ public class LdapService {
     }
     
     public String getData(String username){
-        String dn = "cn=" + username + ",ou=academy,dc=arqsoft,dc=unal,dc=edu,dc=co";
+        String dn = "cn=" + username + ",ou=store,dc=arqsoft,dc=unal,dc=edu,dc=co";
         LDAPEntry foundEntry = null;
         LDAPAttribute uid = null;
         String getAttrs[] = { "uid"};
