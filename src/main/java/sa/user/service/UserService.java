@@ -23,6 +23,11 @@ public class UserService {
         return entityManager.find(User.class, code);
     }
 
+    public User getUserByUsername(String username){
+        return entityManager.createNamedQuery(User.FIND_BY_USERNAME, User.class)
+        .setParameter("username", username).getSingleResult();
+    }
+
     public User createUser(User user) {
         entityManager.persist(user);
         entityManager.flush();
