@@ -42,8 +42,15 @@ public class LdapService {
         }
     }
 
-    public Boolean validateUser(String username, String password){
-        String dn = "cn=" + username + ",ou=store,dc=arqsoft,dc=unal,dc=edu,dc=co";
+    public validateUser(String username, String password){
+        return 
+            validate(username, password, 'Administrator') || 
+            validate(username, password, 'Store Manager') ||
+            validate(username, password, 'Passanger')
+    }
+
+    public Boolean validate(String username, String password, String role){
+        String dn = "cn=" + username + ",ou=" + role + ",dc=arqsoft,dc=unal,dc=edu,dc=co";
         try {
             lc.bind(dn, password);
             return true;

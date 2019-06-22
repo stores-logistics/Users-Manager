@@ -2,6 +2,8 @@ package sa.user.service;
 
 import sa.user.model.User;
 import sa.user.service.LdapService;
+import sa.user.service.UserService;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ejb.Stateless;
@@ -15,20 +17,22 @@ public class AuthService {
 
     String response = "";
     LdapService ldapService = new LdapService();
+    UserService userService = new UserService();
 
-    public String login(User user) {
+    public User login(User user) {
 
         String username = user.getUsername();
         String password = user.getPassword();
 
         if (ldapService.connect()) {
             if (ldapService.validateUser(username, password)) {
-                response = ldapService.getData(username);
+                //response = ldapService.getData(username);
+                response = userService.getUserByUsername(username);
             } else {
-                response = "false";
+                response = null;
             }
         } else {
-            response = "false";
+            response = null;
         }
         return response;
     }
