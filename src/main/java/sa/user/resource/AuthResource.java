@@ -25,11 +25,12 @@ public class AuthResource {
     AuthService authService;
 
     @POST
-    public Response login(User user) {
+    public User login(User user) {
         User reponse = authService.login(user);
-        response = Response.status(Response.Status.OK);
-        response.entity(reponse);
-        return response.build();
+	return reponse;
+        //response = Response.status(Response.Status.OK);
+        //response.entity(reponse);
+        //return response.build();
     }
 
 }
