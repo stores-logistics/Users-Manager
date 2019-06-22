@@ -38,6 +38,15 @@ public class UserResource {
         return response.build();
     }
 
+    @GET
+    @Path("username/{username}")
+    public Response getUserByUsername(@PathParam("username") String username) {
+        User user = userService.getUserByUsername(username);
+        response = Response.status(Response.Status.OK);
+        response.entity(user);
+        return response.build();
+    }
+
     @POST
     public Response createUser(User user) {
         User createdUser = userService.createUser(user);

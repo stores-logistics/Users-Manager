@@ -20,6 +20,7 @@ public class User {
     private String cabin;
     private String creditCard;
     //
+    @Column(name = "username", unique = true)
     private String username;
     private String password;
     private String phoneNumber;
