@@ -15,7 +15,7 @@ public class AuthService {
     @PersistenceContext
     EntityManager entityManager;
 
-    String response = "";
+    User response = new User();
     LdapService ldapService = new LdapService();
     UserService userService = new UserService();
 

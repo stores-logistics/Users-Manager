@@ -42,11 +42,11 @@ public class LdapService {
         }
     }
 
-    public validateUser(String username, String password){
-        return 
-            validate(username, password, 'Administrator') || 
-            validate(username, password, 'Store Manager') ||
-            validate(username, password, 'Passanger')
+    public Boolean validateUser(String username, String password){
+        Boolean admin = validate(username, password, "Administrator");
+        Boolean manager = validate(username, password, "Manager");
+        Boolean passanger = validate(username, password, "Passanger");
+        return (admin || manager || passanger);
     }
 
     public Boolean validate(String username, String password, String role){
