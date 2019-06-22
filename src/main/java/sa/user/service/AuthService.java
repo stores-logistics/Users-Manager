@@ -7,6 +7,7 @@ import sa.user.service.UserService;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ejb.Stateless;
+import javax.ejb.EJB;
 import java.util.List;
 
 @Stateless
@@ -17,7 +18,9 @@ public class AuthService {
 
     User response = new User();
     LdapService ldapService = new LdapService();
-    UserService userService = new UserService();
+
+    @EJB
+    UserService userService;
 
     public User login(User user) {
 
