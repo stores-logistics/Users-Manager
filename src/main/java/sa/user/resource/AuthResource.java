@@ -27,7 +27,7 @@ public class AuthResource {
     @POST
     public User login(User user) {
         User reponse = authService.login(user);
-	return reponse;
+	    return reponse;
         //response = Response.status(Response.Status.OK);
         //response.entity(reponse);
         //return response.build();
