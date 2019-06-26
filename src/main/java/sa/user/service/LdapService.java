@@ -49,6 +49,35 @@ public class LdapService {
         return (admin || manager || passanger);
     }
 
+    public Boolean createUser(String username, String password, String role){
+        try{
+            if(role == 'Admin')
+                role = "Administrator"
+            String distinguishedName = "cn=" + username + ",ou=" + role + ",dc=arqsoft,dc=unal,dc=edu,dc=co";
+            Attributes newAttributes = new BasicAttributes(true);
+            Attribute oc = new BasicAttribute("objectclass");
+            oc.add("top");
+            oc.add("inetOrgPerson");
+            oc.add("posixAccount");
+            newAttributes.put(oc);
+            newAttributes.put(new BasicAttribute("firstName", username));
+            newAttributes.put(new BasicAttribute("lastName", username));
+            newAttributes.put(new BasicAttribute("cn", username));
+            newAttributes.put(new BasicAttribute("sn", username));
+            newAttributes.put(new BasicAttribute("givenName", username));
+            newAttributes.put(new BasicAttribute("displayName", username));
+            newAttributes.put(new BasicAttribute("userName", username));
+            newAttributes.put(new BasicAttribute("gidNumber", 500));
+            newAttributes.put(new BasicAttribute("userPassword", password));
+            newAttributes.put(new BasicAttribute("homeDirectory", "/home/users/" + username));
+            System.out.println("Creating: " + username);
+            ldapContext.createSubcontext(distinguishedName, newAttributes);
+        }catch (Exception e){
+            System.out.println("create error: " + e);
+            e.printStackTrace();
+        }
+    }
+
     public Boolean validate(String username, String password, String role){
         String dn = "cn=" + username + ",ou=" + role + ",dc=arqsoft,dc=unal,dc=edu,dc=co";
         try {

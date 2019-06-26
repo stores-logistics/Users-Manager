@@ -2,6 +2,8 @@ package sa.user.service;
 
 import sa.user.model.User;
 
+import sa.user.service.LdapService;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -13,6 +15,8 @@ public class UserService {
 
     @PersistenceContext
     EntityManager entityManager;
+
+    LdapService ldapService = new LdapService();
 
     public List<User> getAllUsers(int first, int maxResult) {
         return entityManager.createNamedQuery(User.FIND_ALL)
@@ -29,8 +33,16 @@ public class UserService {
     }
 
     public User createUser(User user) {
-        entityManager.persist(user);
-        entityManager.flush();
+        try{
+            entityManager.persist(user); //Crea el usuario en la base de datos
+            entityManager.flush();
+
+            //Crea el usuario en el ldap
+            ldapService.createUser(user.getUsername(), user.getPassword(), user.getType())
+        } catch(Exception ex){
+            System.out.println("create error: " + ex);
+            ex.printStackTrace();
+        }
         return user;
     }
 
