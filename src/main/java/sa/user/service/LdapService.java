@@ -63,14 +63,12 @@ public class LdapService {
         //Attributes newAttributes = new BasicAttributes(true);
         LDAPAttributeSet attributeSet = new LDAPAttributeSet();
         attributeSet.add( new LDAPAttribute("objectclass", new String[]{"inetOrgPerson", "top", "posixAccount"}));   
-        attributeSet.add( new LDAPAttribute("firstName", username));               
-        attributeSet.add( new LDAPAttribute("lastName", username));        
+        attributeSet.add( new LDAPAttribute("firstname", username));       
         attributeSet.add( new LDAPAttribute("cn", username));               
         attributeSet.add( new LDAPAttribute("givenname", username));        
-        attributeSet.add( new LDAPAttribute("displayName", username));    
+        attributeSet.add( new LDAPAttribute("displayname", username));    
         attributeSet.add( new LDAPAttribute("sn", username));  
-        attributeSet.add( new LDAPAttribute("userpassword", password)); 
-        attributeSet.add( new LDAPAttribute("homeDirectory", "/home/users/" + username));
+        attributeSet.add( new LDAPAttribute("userpassword", password));
 
         LDAPEntry newEntry = new LDAPEntry( dn, attributeSet );
 
