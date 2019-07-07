@@ -1,7 +1,7 @@
-/home/caenietoba/Users-Manager/src/main/java/sa/user/service/AuthService.java
-/home/caenietoba/Users-Manager/src/main/java/sa/user/service/UserService.java
-/home/caenietoba/Users-Manager/src/main/java/sa/user/service/LdapService.java
-/home/caenietoba/Users-Manager/src/main/java/sa/user/resource/UserResource.java
-/home/caenietoba/Users-Manager/src/main/java/sa/user/JAXRSConfiguration.java
-/home/caenietoba/Users-Manager/src/main/java/sa/user/resource/AuthResource.java
-/home/caenietoba/Users-Manager/src/main/java/sa/user/model/User.java
+C:\Users\cenb\Documents\Proyectos\Arquitectura\User-manager\Users-Manager\src\main\java\sa\user\resource\UserResource.java
+C:\Users\cenb\Documents\Proyectos\Arquitectura\User-manager\Users-Manager\src\main\java\sa\user\service\LdapService.java
+C:\Users\cenb\Documents\Proyectos\Arquitectura\User-manager\Users-Manager\src\main\java\sa\user\JAXRSConfiguration.java
+C:\Users\cenb\Documents\Proyectos\Arquitectura\User-manager\Users-Manager\src\main\java\sa\user\resource\AuthResource.java
+C:\Users\cenb\Documents\Proyectos\Arquitectura\User-manager\Users-Manager\src\main\java\sa\user\service\AuthService.java
+C:\Users\cenb\Documents\Proyectos\Arquitectura\User-manager\Users-Manager\src\main\java\sa\user\model\User.java
+C:\Users\cenb\Documents\Proyectos\Arquitectura\User-manager\Users-Manager\src\main\java\sa\user\service\UserService.java

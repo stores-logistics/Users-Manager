@@ -38,7 +38,7 @@ public class UserService {
             entityManager.flush();
 
             //Crea el usuario en el ldap
-            ldapService.createUser(user.getUsername(), user.getPassword(), user.getType())
+            ldapService.createUser(user.getUsername(), user.getPassword(), user.getType());
         } catch(Exception ex){
             System.out.println("create error: " + ex);
             ex.printStackTrace();

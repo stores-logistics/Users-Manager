@@ -50,32 +50,72 @@ public class LdapService {
     }
 
     public Boolean createUser(String username, String password, String role){
-        try{
-            if(role == 'Admin')
-                role = "Administrator"
-            String distinguishedName = "cn=" + username + ",ou=" + role + ",dc=arqsoft,dc=unal,dc=edu,dc=co";
-            Attributes newAttributes = new BasicAttributes(true);
-            Attribute oc = new BasicAttribute("objectclass");
-            oc.add("top");
-            oc.add("inetOrgPerson");
-            oc.add("posixAccount");
-            newAttributes.put(oc);
-            newAttributes.put(new BasicAttribute("firstName", username));
-            newAttributes.put(new BasicAttribute("lastName", username));
-            newAttributes.put(new BasicAttribute("cn", username));
-            newAttributes.put(new BasicAttribute("sn", username));
-            newAttributes.put(new BasicAttribute("givenName", username));
-            newAttributes.put(new BasicAttribute("displayName", username));
-            newAttributes.put(new BasicAttribute("userName", username));
-            newAttributes.put(new BasicAttribute("gidNumber", 500));
-            newAttributes.put(new BasicAttribute("userPassword", password));
-            newAttributes.put(new BasicAttribute("homeDirectory", "/home/users/" + username));
-            System.out.println("Creating: " + username);
-            ldapContext.createSubcontext(distinguishedName, newAttributes);
-        }catch (Exception e){
-            System.out.println("create error: " + e);
-            e.printStackTrace();
-        }
+        if(role == "Admin")
+            role = "Administrator";
+
+        String dn = "cn=" + username + ",ou=" + role + ",dc=arqsoft,dc=unal,dc=edu,dc=co";
+        String loginDN = "cn=admin,dc=arqsoft,dc=unal,dc=edu,dc=co";
+        String ldapHost = "34.68.2.153";
+        String passwordLogin = "admin";
+        int ldapPort =  LDAPConnection.DEFAULT_PORT;
+        int ldapVersion = LDAPConnection.LDAP_V3;
+
+        //Attributes newAttributes = new BasicAttributes(true);
+        LDAPAttributeSet attributeSet = new LDAPAttributeSet();
+        attributeSet.add( new LDAPAttribute("objectclass", new String[]{"inetOrgPerson", "top", "posixAccount"}));   
+        attributeSet.add( new LDAPAttribute("firstName", username));               
+        attributeSet.add( new LDAPAttribute("lastName", username));        
+        attributeSet.add( new LDAPAttribute("cn", username));               
+        attributeSet.add( new LDAPAttribute("givenname", username));        
+        attributeSet.add( new LDAPAttribute("displayName", username));    
+        attributeSet.add( new LDAPAttribute("sn", username));  
+        attributeSet.add( new LDAPAttribute("userpassword", password)); 
+        attributeSet.add( new LDAPAttribute("homeDirectory", "/home/users/" + username));
+
+        LDAPEntry newEntry = new LDAPEntry( dn, attributeSet );
+
+        try {
+
+        // connect to the server
+            lc.connect( ldapHost, ldapPort );
+
+        // authenticate to the server
+            lc.bind( ldapVersion, loginDN, passwordLogin.getBytes("UTF8") );
+
+            lc.add( newEntry );
+
+            System.out.println( "\nAdded object: " + dn + " successfully." );
+
+        // disconnect with the server
+            lc.disconnect();
+            return true;
+
+        } catch( LDAPException e ) {
+            System.out.println( "Error:  " + e.toString());
+            return false;
+        } catch( UnsupportedEncodingException e ) {
+            System.out.println( "Error: " + e.toString() );
+            return false;
+        }                     
+
+        //Attribute oc = new BasicAttribute("objectclass");
+        //oc.add("top");
+        //oc.add("inetOrgPerson");
+        //oc.add("posixAccount");           
+        //attributeSet.add(oc);
+        /*newAttributes.put(oc);
+        newAttributes.put(new BasicAttribute("firstName", username));
+        newAttributes.put(new BasicAttribute("lastName", username));
+        newAttributes.put(new BasicAttribute("cn", username));
+        newAttributes.put(new BasicAttribute("sn", username));
+        newAttributes.put(new BasicAttribute("givenName", username));
+        newAttributes.put(new BasicAttribute("displayName", username));
+        newAttributes.put(new BasicAttribute("userName", username));
+        newAttributes.put(new BasicAttribute("gidNumber", 500));
+        newAttributes.put(new BasicAttribute("userPassword", password));
+        newAttributes.put(new BasicAttribute("homeDirectory", "/home/users/" + username));
+        System.out.println("Creating: " + username);
+        ldapContext.createSubcontext(distinguishedName, newAttributes);*/
     }
 
     public Boolean validate(String username, String password, String role){
