@@ -7,7 +7,7 @@ import javax.faces.context.FacesContext;
 public class LdapService {
 
     private LDAPConnection lc = new LDAPConnection();
-
+    private String ldapHost = "35.184.233.241";
 
     public Boolean login(String user, String password){
         if (connect()) {
@@ -22,8 +22,6 @@ public class LdapService {
     }
 
     public Boolean connect() {
-
-        String ldapHost = "34.68.2.153";
         String dn = "cn=admin,dc=arqsoft,dc=unal,dc=edu,dc=co";
         String password = "admin";
 
@@ -55,7 +53,6 @@ public class LdapService {
 
         String dn = "cn=" + username + ",ou=" + role + ",dc=arqsoft,dc=unal,dc=edu,dc=co";
         String loginDN = "cn=admin,dc=arqsoft,dc=unal,dc=edu,dc=co";
-        String ldapHost = "34.68.2.153";
         String passwordLogin = "admin";
         int ldapPort =  LDAPConnection.DEFAULT_PORT;
         int ldapVersion = LDAPConnection.LDAP_V3;
@@ -63,7 +60,7 @@ public class LdapService {
         //Attributes newAttributes = new BasicAttributes(true);
         LDAPAttributeSet attributeSet = new LDAPAttributeSet();
         attributeSet.add( new LDAPAttribute("objectclass", new String[]{"inetOrgPerson", "top", "posixAccount"}));   
-        attributeSet.add( new LDAPAttribute("firstname", username));       
+        //attributeSet.add( new LDAPAttribute("firstname", username));       
         attributeSet.add( new LDAPAttribute("cn", username));               
         attributeSet.add( new LDAPAttribute("givenname", username));        
         attributeSet.add( new LDAPAttribute("displayname", username));    
